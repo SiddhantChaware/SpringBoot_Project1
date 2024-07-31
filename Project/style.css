@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: #2b1d0f;
+    color: #fff;
+
+}
+
+header nav{
+    background-color: #212121;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header nav h1{
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav form{
+    display: flex;
+    justify-content: center;
+}
+
+form input[type="text"]{
+    flex-grow: 1;
+    margin-right: 10px;
+}
+form input[type="text"],button[type="submit"]{
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form button[type="submit"]{
+    background-color: #f44336;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s
+    ease-in-out;
+}
+form button[type="submit"]:hover
+{
+    background-color: #ff5c5c;
+}
+
+.product-container{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    place-items: center;
+}
+.product{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    border-radius: 6px;
+    box-shadow:0 5px 10px (78, 73, 73, 0.1),-5px -5px 10px (34, 34, 34, 0.5);
+    cursor: pointer; 
+    max-width: 350px;
+}
+.product img{
+    height: 300px;
+}
+@media screen and(max-width:600px) {
+    header nav{
+        flex-direction: column;
+    }
+    header nav form{
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+.cart{
+    font-size: 15px;
+}
+.cart .number{
+    background-color: #e8e8f6;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 10px solid;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+    border-radius: 40px; 
+    margin-left: 20px;
+}
+
+.cart .number button{
+    font-size: 30px;
+    background-color: #e8e8f6;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.addcart{
+    display: inline;
+    padding-left: 50px;
+    margin-top: 10px;
+    background-color: #707ada;
+    border: 2px solid  #e8e8f6;
+    font-size: 20px;
+    border-radius: 30px;
+    padding-right: 30px;
+}
+.addcart button{
+    background-color: #707ada;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
